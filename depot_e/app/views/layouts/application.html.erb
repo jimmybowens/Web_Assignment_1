@@ -1,3 +1,5 @@
+
+
 <!-- START:head -->
 <!DOCTYPE html>
 <html>
@@ -30,10 +32,7 @@
 		<li><a>Time: <%=@current_time.hour%>:<%=@current_time.min%>:<%=@current_time.sec%></a></li>
 		
 		<li><a>Last Visit: <%=cookies[:last_visit]%></a></li>
-		
-		<% if cookies[:last_visit].to_i < 120%>
-			<a>YEP</a>
-		<%end%>
+		<li><%=%></li>
       </ul>
     </div>
     <div id="main">
