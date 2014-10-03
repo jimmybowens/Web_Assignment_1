@@ -31,8 +31,15 @@
 		<li><a>Date: <%=@current_time.month.to_s%>/<%=@current_time.day%>/<%=@current_time.year%></a></li>
 		<li><a>Time: <%=@current_time.hour%>:<%=@current_time.min%>:<%=@current_time.sec%></a></li>
 		
-		<li><a>Last Visit: <%=cookies[:last_visit]%></a></li>
-		<li><%=%></li>
+		<!--<li><a>Last Visit: <%=cookies[:last_visit]%></a></li>-->
+		
+		<%if @get_num_days > 120 %>
+			<li>You have been away too long</li>
+			
+		<%else%>
+			<li><a>Last Visit: <%=cookies[:last_visit]%></a></li>
+			<% cookies[:last_visit] = Time.now()%>
+		<% end %>
       </ul>
     </div>
     <div id="main">
