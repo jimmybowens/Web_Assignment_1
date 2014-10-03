@@ -24,6 +24,16 @@
         <li><a href="http://www..../faq">Questions</a></li>
         <li><a href="http://www..../news">News</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
+		<li><a>--------</a></li>
+		
+		<li><a>Date: <%=@current_time.month.to_s%>/<%=@current_time.day%>/<%=@current_time.year%></a></li>
+		<li><a>Time: <%=@current_time.hour%>:<%=@current_time.min%>:<%=@current_time.sec%></a></li>
+		
+		<li><a>Last Visit: <%=cookies[:last_visit]%></a></li>
+		
+		<% if cookies[:last_visit].to_i < 120%>
+			<a>YEP</a>
+		<%end%>
       </ul>
     </div>
     <div id="main">

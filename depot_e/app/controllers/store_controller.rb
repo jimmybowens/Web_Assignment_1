@@ -9,5 +9,9 @@
 class StoreController < ApplicationController
   def index
     @products = Product.order(:title)
+	@current_time = Time.now()
+	
+	#record the user's last time visited the site. This will use cookies
+	cookies[:last_visit]#{value:Time.now(), expires:120.days.from_now,domain:nil}
   end
 end
