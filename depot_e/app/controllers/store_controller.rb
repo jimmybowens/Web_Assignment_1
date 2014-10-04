@@ -11,7 +11,7 @@ class StoreController < ApplicationController
     @products = Product.order(:title)
 	@current_time = Time.now()	
 	#record the user's last time visited the site. This will use cookies
-    cookies[:last_visit]#={value:Time.now(), expires:120.days.from_now,domain:nil}
+    cookies[:last_visit]={value:Time.now(), expires:120.days.from_now,domain:nil}
     @get_cookie_days = Date.strptime(cookies[:last_visit].to_s).day
     @get_current_days = @current_time.day
     @get_num_days = @get_current_days - @get_cookie_days
