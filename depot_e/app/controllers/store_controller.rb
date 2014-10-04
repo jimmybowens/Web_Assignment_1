@@ -17,4 +17,10 @@ class StoreController < ApplicationController
     @get_num_days = @get_current_days - @get_cookie_days
     
   end
+  
+  def towson
+      
+  end 
+    
+
 end

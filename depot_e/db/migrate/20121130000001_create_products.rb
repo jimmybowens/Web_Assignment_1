@@ -13,6 +13,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.string :image_url
       t.decimal :price, precision: 8, scale: 2
+      t.string :store_location #added
 
       t.timestamps
     end

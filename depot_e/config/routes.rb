@@ -8,6 +8,9 @@
 #---
 Depot::Application.routes.draw do
   get "store/index"
+  get "store/towson"
+  
+  match 'towson', to:'store#towson', via: 'get'
   resources :products
 
   # The priority is based upon order of creation:
