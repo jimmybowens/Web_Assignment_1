@@ -17,7 +17,10 @@
         <%= sanitize(product.description) %>
         <div class="price_line">
     <!-- START:currency -->
-<span class="price"><%=number_to_currency(product.price :local =>'fr')%></span>
+	<span class="price"><%=number_to_currency(product.price, :unit =>"$")%></span>
+	<span class="price"><%=number_to_currency(GoogCurrency.usd_to_gbp(product.price), :unit => "£")%></span>
+	<span class="price"><%=number_to_currency(GoogCurrency.usd_to_eur(product.price), :unit => "€")%></span>
+	<span class="price"><%=number_to_currency(GoogCurrency.usd_to_chf(product.price), :unit => "CHF")%></span>
     <!-- END:currency -->
         </div>
       </div>
