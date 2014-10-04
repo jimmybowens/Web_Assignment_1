@@ -14,6 +14,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image_url
       t.decimal :price, precision: 8, scale: 2
       t.string :store_location #added
+      t.string :number_of_books
 
       t.timestamps
     end

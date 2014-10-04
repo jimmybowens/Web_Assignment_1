@@ -8,6 +8,7 @@
 #---
 # encoding: utf-8
 Product.delete_all
+
 Product.create!(title: 'CoffeeScript',
   description: 
     %{<p>
@@ -18,8 +19,9 @@ Product.create!(title: 'CoffeeScript',
 	while writing clearer, cleaner, and safer code.
       </p>},
   image_url:   'cs.jpg',    
-  price: 36.00),
-store_location: 'Towson'
+  price: 36.00,
+store_location: 'Towson',
+number_of_books: 20)
 # . . .
 Product.create!(title: 'Programming Ruby 1.9 & 2.0',
   description:
@@ -29,8 +31,9 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
         you should add Ruby to your toolbox.
       </p>},
   image_url: 'ruby.jpg',
-  price: 49.95),
-store_location: 'Online'
+  price: 49.95,
+store_location: 'Online',
+                number_of_books: 50)
 # . . .
 
 Product.create!(title: 'Rails Test Prescriptions',
@@ -44,5 +47,6 @@ Product.create!(title: 'Rails Test Prescriptions',
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
   image_url: 'rtp.jpg',
-  price: 34.95),
-store_location: 'Towson'
+  price: 34.95,
+  store_location: 'Towson',
+                number_of_books: 40)
