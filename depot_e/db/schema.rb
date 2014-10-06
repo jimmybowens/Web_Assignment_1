@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20121130000001) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",           precision: 8, scale: 2
-    t.string   "store_location"
-    t.string   "number_of_books"
+    t.decimal  "price",                           precision: 8, scale: 2
+    t.integer  "store_location_towson_inventory"
+    t.integer  "store_location_online_inventory"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -14,8 +14,17 @@
       <div class="entry">
         <%= image_tag(product.image_url) %>
         <h3><%= product.title %></h3>
-        <h3>Location: <%=product.store_location%></h3>
-        <h3>In Stock: <%=product.number_of_books%></h3>
+        
+        <%if product.store_location_towson_inventory > 0 && product.store_location_online_inventory < 1%>
+        	<span class="message">Available Towson Only - </span>
+        	<span class="message_2">In Stock: <%=product.store_location_towson_inventory%></span>
+        <%elsif product.store_location_towson_inventory < 1 && product.store_location_online_inventory > 0%>
+        	<span class="message">Available Online Only - </span>
+        	<span class="message_2">In Stock: <%=product.store_location_online_inventory%></span>
+        <%else%>
+        	<span class="message_2">Available online and at the Towson Store - </span>
+        	<span class="message_2">In Stock Online: <%=product.store_location_online_inventory%>, In Stock at Towson: <%=product.store_location_towson_inventory%></span>
+        <%end%>
         <%= sanitize(product.description) %>
         <div class="price_line">
     <!-- START:currency -->

@@ -20,8 +20,8 @@ Product.create!(title: 'CoffeeScript',
       </p>},
   image_url:   'cs.jpg',    
   price: 36.00,
-store_location: 'Towson',
-number_of_books: 20)
+store_location_towson_inventory: 80,
+store_location_online_inventory: 20)
 # . . .
 Product.create!(title: 'Programming Ruby 1.9 & 2.0',
   description:
@@ -32,8 +32,8 @@ Product.create!(title: 'Programming Ruby 1.9 & 2.0',
       </p>},
   image_url: 'ruby.jpg',
   price: 49.95,
-store_location: 'Online',
-                number_of_books: 50)
+store_location_towson_inventory: 4,
+                store_location_online_inventory: 6)
 # . . .
 
 Product.create!(title: 'Rails Test Prescriptions',
@@ -48,5 +48,5 @@ Product.create!(title: 'Rails Test Prescriptions',
       </p>},
   image_url: 'rtp.jpg',
   price: 34.95,
-  store_location: 'Towson',
-                number_of_books: 40)
+  store_location_towson_inventory: 70,
+                store_location_online_inventory: 0)

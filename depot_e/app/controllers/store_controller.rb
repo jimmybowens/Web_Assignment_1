@@ -9,8 +9,7 @@
 class StoreController < ApplicationController
   def index
       #@products = Product.order(:title)
-      @products = Product.find_by_sql("SELECT * FROM products
-                                    WHERE store_location ='Twson'")
+      @products = Product.find_by_sql("SELECT * FROM products WHERE store_location_towson_inventory > 0 OR store_location_online_inventory > 0 ")
 	@current_time = Time.now()	
 	#record the user's last time visited the site. This will use cookies
     cookies[:last_visit]={value:Time.now(), expires:120.days.from_now,domain:nil}
